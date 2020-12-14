@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Notes</title>
+
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="./notes.js" defer></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="new-note-form">
+				<h2>New note</h2>
+				<input placeholder="Note title" id="new-note-title" />
+				<input placeholder="Note body" id="new-note-body" />
+				<input placeholder="Note body" id="new-note-color" type="color" value="#ffffff" />
+				<button onclick="createNote()">Add new note</button>
+			</div>
+			<div class="notes" id="notes-pinned"></div>
+			<div class="notes" id="notes"></div>
+		</div>
+	</body>
+</html>
