@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather</title>
+
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="./weather.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<h1>Weather</h1>
+			<div class="new-city">
+				<label for="city">New city</label><br />
+				<input id="city-input" />
+				<button id="city-search" onclick="addCity()">Add city</button>
+			</div>
+			<div id="weather-tiles-root"></div>
+		</main>
+	</body>
+</html>
