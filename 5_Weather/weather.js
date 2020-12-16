@@ -41,7 +41,7 @@ const renderWeatherTile = (data) => {
 	tile.innerHTML = `
     <p class="city-name">${data.name}</p>
     <p class="temp">${data.main.temp}° (min ${data.main.temp_min}° | max ${data.main.temp_max}°)</p>
-    <p class="temp-feels">Feels like ${data.main.feels_like}</p>
+    <p class="temp-feels">Feels like ${data.main.feels_like}°</p>
     <p class="humidity">Humidity: ${data.main.humidity}%</p>
     <p class="pressure">Air pressure: ${data.main.pressure} hPa</p>
   `;
