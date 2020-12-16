@@ -23,11 +23,40 @@ main {
           justify-content: center;
 }
 
+main .sound-channels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .sound-channels .sound-channel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+main .sound-channels .sound-channel button {
+  background-color: transparent;
+  margin: 0.2rem 0.3rem;
+}
+
 main .sound-kit-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 40%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -53,5 +82,15 @@ main .sound-kit-buttons .button {
   -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
   font-size: 4rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+main .sound-kit-buttons .button.active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: black;
+  color: white;
+  opacity: 0.9;
 }
 /*# sourceMappingURL=styles.css.map */

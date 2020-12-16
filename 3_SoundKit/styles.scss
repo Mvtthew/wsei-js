@@ -14,9 +14,27 @@ main {
 	align-items: center;
 	justify-content: center;
 
+	.sound-channels {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+
+		.sound-channel {
+			display: flex;
+			flex-direction: column;
+			padding: 2rem;
+
+			button {
+				background-color: transparent;
+				margin: 0.2rem 0.3rem;
+			}
+		}
+	}
+
 	.sound-kit-buttons {
 		display: flex;
-		width: 50%;
+		width: 40%;
 		flex-wrap: wrap;
 		justify-content: center;
 
@@ -31,6 +49,13 @@ main {
 			border: 1px solid rgba($color: #000000, $alpha: 0.1);
 			box-shadow: 5px 5px 0 rgba($color: #000000, $alpha: 0.2);
 			font-size: 4rem;
+			transition: 0.3s all;
+			&.active {
+				transform: scale(0.9);
+				background-color: black;
+				color: white;
+				opacity: 0.9;
+			}
 		}
 	}
 }
