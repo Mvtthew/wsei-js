@@ -12,6 +12,8 @@ class Note {
 	}
 
 	deleteNote() {
+		notes.notes.splice(notes.notes.indexOf(this), 1);
+		notes.saveNotesToLocalStorage();
 		notes.renderNotes();
 	}
 
