@@ -12,7 +12,7 @@ class City {
 			.then((res) => res.json())
 			.then((data) => {
 				this.weatherData = data;
-				city.drawCity();
+				this.drawCity();
 			});
 	}
 
@@ -44,6 +44,70 @@ class City {
 	}
 }
 
-const city = new City('Kraków');
+class WeatherList {
+	cities = [];
 
-class WeatherList {}
+	constructor() {
+		this.cities = this.getCitiesFromLocalStorage();
+		this.renderWeather();
+		this.initAddingNewCity();
+	}
+
+	getCitiesFromLocalStorage() {
+		let cities = [];
+		const citiesString = localStorage.getItem('weather-cities');
+		if (citiesString) {
+			cities = JSON.parse(citiesString);
+		}
+		return cities;
+	}
+
+	checkCityName(cityName) {
+		return new Promise((resolve) => {
+			fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=f054371b11ebe3fa19fbcb60969b8b97`)
+				.then((res) => res.json())
+				.then((data) => {
+					if (data.cod == 200) {
+						resolve(true);
+					} else {
+						resolve(false);
+					}
+				});
+		});
+	}
+
+	saveCitiesToLocalStorage() {
+		localStorage.setItem('weather-cities', JSON.stringify(this.cities));
+	}
+
+	renderWeather() {
+		const citiesParent = document.getElementById('cities');
+		citiesParent.innerHTML = '';
+
+		this.cities.forEach((city) => {
+			new City(city);
+		});
+	}
+
+	initAddingNewCity() {
+		document.getElementById('add-new-city').addEventListener('click', () => {
+			this.addNewCity();
+		});
+	}
+
+	addNewCity() {
+		const newCityName = document.getElementById('new-city').value;
+		console.log(newCityName);
+		this.checkCityName(newCityName).then((checked) => {
+			if (checked) {
+				this.cities.push(newCityName);
+				this.saveCitiesToLocalStorage();
+				this.renderWeather();
+			} else {
+				alert('Invalid city name!');
+			}
+		});
+	}
+}
+
+const list = new WeatherList();
