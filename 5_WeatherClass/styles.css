@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  color: #eee;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1b1b2f;
+}
+
+main .add-form {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f4068;
+}
+
+main .add-form input,
+main .add-form button {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+main .add-form input {
+  width: 40%;
+}
+
+main .add-form button {
+  padding: 1rem 5rem;
+}
+
+main .add-form input {
+  margin-right: 1rem;
+  text-align: center;
+}
+
+main .cities {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .cities .city {
+  width: 350px;
+  height: 200px;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: #162447;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  border-radius: 1rem;
+}
+
+main .cities .city .name {
+  font-size: 2rem;
+}
+
+main .cities .city .date-now {
+  font-size: 0.9rem;
+}
+
+main .cities .city .now-temp {
+  font-size: 1.4rem;
+  margin-top: 0.6rem;
+}
+
+main .cities .city .now-temp .temp {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+main .cities .city .now-visibility {
+  font-size: 0.7rem;
+}
+
+main .cities .city .next-temps {
+  margin-top: 1rem;
+}
+
+main .cities .city .next-temps > .temp {
+  font-size: 0.9rem;
+}
+
+main .cities .city .next-temps > .temp > .temp {
+  font-size: 1rem;
+  font-weight: 900;
+}
+/*# sourceMappingURL=styles.css.map */
