@@ -71,6 +71,7 @@ main .cities .city {
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   display: inline-block;
   border-radius: 1rem;
+  position: relative;
 }
 
 main .cities .city .name {
@@ -106,5 +107,13 @@ main .cities .city .next-temps > .temp {
 main .cities .city .next-temps > .temp > .temp {
   font-size: 1rem;
   font-weight: 900;
+}
+
+main .cities .city .delete {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  background-color: unset;
 }
 /*# sourceMappingURL=styles.css.map */

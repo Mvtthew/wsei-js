@@ -39,8 +39,18 @@ class City {
         ${this.weatherData.list[4].dt_txt} - ${this.weatherData.list[4].weather[0].main}, <span class="temp">${this.weatherData.list[4].main.temp}°</span>
         </div>
       </div>
+      <button class="delete">🧺</button>
     `;
+		cityElement.querySelector('.delete').addEventListener('click', () => {
+			this.removeCity();
+		});
 		citiesParent.appendChild(cityElement);
+	}
+
+	removeCity() {
+		list.cities.splice(list.cities.indexOf(this), 1);
+		list.saveCitiesToLocalStorage();
+		list.renderWeather();
 	}
 }
 
@@ -103,6 +113,7 @@ class WeatherList {
 				this.cities.push(newCityName);
 				this.saveCitiesToLocalStorage();
 				this.renderWeather();
+				document.getElementById('new-city').value = '';
 			} else {
 				alert('Invalid city name!');
 			}
