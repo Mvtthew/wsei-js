@@ -6,6 +6,7 @@
 		<title>Notes</title>
 
 		<link rel="stylesheet" href="./styles.css" />
+		<script src="./notes.js" defer></script>
 	</head>
 	<body>
 		<main>
@@ -15,31 +16,24 @@
 				</div>
 				<div class="group">
 					<label>Title</label>
-					<input />
+					<input id="new-note-title" />
 				</div>
 				<div class="group">
 					<label>Body</label>
-					<input />
+					<textarea id="new-note-body" rows="8"></textarea>
 				</div>
 				<div class="group">
-					<label>Note color</label>
-					<input type="color" />
+					<label>Background</label>
+					<input id="new-note-bg" type="color" value="#ffffff" />
 				</div>
 				<div class="group">
-					<button>Add</button>
+					<button id="create-note">Add</button>
 				</div>
 			</div>
 			<div id="notes">
-				<div id="pinned">
-					<div class="note">
-						<p class="title">Title</p>
-						<p class="body">Note body</p>
-						<div class="options">
-							<button>🧺</button>
-							<button>📌</button>
-						</div>
-					</div>
-				</div>
+				<h1>Pinned notes</h1>
+				<div id="pinned"></div>
+				<h1>Other notes</h1>
 				<div id="other"></div>
 			</div>
 		</main>

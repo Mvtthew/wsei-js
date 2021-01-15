@@ -26,11 +26,15 @@ main {
 			width: 60%;
 			margin-left: -2rem;
 			margin-bottom: 1rem;
+			h1 {
+				margin-bottom: 2rem;
+			}
 			label {
 				display: block;
 				margin-bottom: 0.5rem;
 			}
-			input {
+			input,
+			textarea {
 				width: 100%;
 				border: 0;
 				padding: 1rem;
@@ -50,10 +54,23 @@ main {
 
 	#notes {
 		width: 75%;
-		height: 100vh;
+		height: calc(100vh - 6rem);
 		display: flex;
 		flex-direction: column;
-		padding: 5rem;
+		padding: 3rem;
+		overflow-y: auto;
+
+		h1 {
+			text-align: center;
+			padding: 1.5rem;
+		}
+
+		#pinned,
+		#other {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 
 		.note {
 			width: 300px;
@@ -61,6 +78,7 @@ main {
 			box-shadow: 0 0 15px rgba(#000, 0.1);
 			position: relative;
 			border-radius: 0.5rem;
+			margin: 1rem;
 
 			.title {
 				text-align: center;

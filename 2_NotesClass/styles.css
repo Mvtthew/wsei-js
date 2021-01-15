@@ -41,12 +41,17 @@ main #new-note .group {
   margin-bottom: 1rem;
 }
 
+main #new-note .group h1 {
+  margin-bottom: 2rem;
+}
+
 main #new-note .group label {
   display: block;
   margin-bottom: 0.5rem;
 }
 
-main #new-note .group input {
+main #new-note .group input,
+main #new-note .group textarea {
   width: 100%;
   border: 0;
   padding: 1rem;
@@ -65,7 +70,7 @@ main #new-note .group button {
 
 main #notes {
   width: 75%;
-  height: 100vh;
+  height: calc(100vh - 6rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +78,25 @@ main #notes {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5rem;
+  padding: 3rem;
+  overflow-y: auto;
+}
+
+main #notes h1 {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+main #notes #pinned,
+main #notes #other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #notes .note {
@@ -83,6 +106,7 @@ main #notes .note {
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
   border-radius: 0.5rem;
+  margin: 1rem;
 }
 
 main #notes .note .title {
