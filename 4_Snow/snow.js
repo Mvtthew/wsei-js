@@ -49,7 +49,7 @@ const render = () => {
 	ctx.clearRect(0, 0, canvasW, canvasH);
 	snowFlakes.forEach((snowFlake, index) => {
 		snowFlake.x = snowFlake.x + 2;
-		snowFlake.y = snowFlake.y + 12;
+		snowFlake.y = snowFlake.y + 4;
 
 		drawSnowFlake(snowFlake.x, snowFlake.y, index);
 	});
