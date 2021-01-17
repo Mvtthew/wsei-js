@@ -20,7 +20,7 @@
 }
 
 .images img {
-  width: 200px;
+  width: auto;
   height: 200px;
   margin: 1rem;
   cursor: -webkit-zoom-in;
